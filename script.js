@@ -1,6 +1,28 @@
 let cart = [];
 
-// Função para alternar as abas de categorias ao clicar no menu superior
+// Lista de acréscimos disponíveis para adicionar aos lanches
+const availableAddons = [
+    { name: 'Salada', price: 2.50 },
+    { name: 'Mussarela', price: 3.00 },
+    { name: 'Presunto', price: 3.00 },
+    { name: 'Ovo', price: 3.00 },
+    { name: 'Milho', price: 3.00 },
+    { name: 'Batata Palha', price: 3.00 },
+    { name: 'Banana', price: 3.50 },
+    { name: 'Cheddar', price: 4.00 },
+    { name: 'Bife', price: 4.00 },
+    { name: 'Bacon', price: 5.00 },
+    { name: 'Bife Picanha', price: 5.00 },
+    { name: 'Frango', price: 6.00 },
+    { name: 'Bife Gourmet', price: 7.00 },
+    { name: 'Maionese', price: 2.50 },
+    { name: 'Mostarda', price: 2.50 },
+    { name: 'Cortado Ao Meio', price: 2.00 }
+];
+
+let currentCustomizeItem = null;
+
+// Filtrar categorias
 function filterCategory(category, event) {
     document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
@@ -15,7 +37,8 @@ function filterCategory(category, event) {
     });
 }
 
-function addToCart(name, price) {
+// Adicionar direto (bebidas, entradas e acréscimos avulsos)
+function addToCartDirect(name, price) {
     const existingItem = cart.find(i => i.name === name);
     if (existingItem) {
         existingItem.quantity += 1;
@@ -23,6 +46,68 @@ function addToCart(name, price) {
         cart.push({ name, price, quantity: 1 });
     }
     updateCartUI();
+}
+
+// Abrir modal para customizar lanches com acréscimos específicos
+function openCustomizeModal(itemName, basePrice) {
+    currentCustomizeItem = { name: itemName, basePrice: basePrice };
+    document.getElementById('modal-item-title').innerText = itemName;
+
+    const addonsContainer = document.getElementById('modal-addons-list');
+    addonsContainer.innerHTML = '';
+
+    availableAddons.forEach((addon, index) => {
+        const div = document.createElement('label');
+        div.className = 'addon-label';
+        div.innerHTML = `
+            <span>${addon.name} (+ R$ ${addon.price.toFixed(2).replace('.', ',')})</span>
+            <input type="checkbox" value="${index}" onchange="updateCustomizeTotal()">
+        `;
+        addonsContainer.appendChild(div);
+    });
+
+    updateCustomizeTotal();
+    document.getElementById('customize-modal').classList.remove('hidden');
+}
+
+function closeCustomizeModal() {
+    document.getElementById('customize-modal').classList.add('hidden');
+    currentCustomizeItem = null;
+}
+
+function updateCustomizeTotal() {
+    if (!currentCustomizeItem) return;
+    let total = currentCustomizeItem.basePrice;
+
+    const checkboxes = document.querySelectorAll('#modal-addons-list input[type="checkbox"]:checked');
+    checkboxes.forEach(cb => {
+        const addon = availableAddons[cb.value];
+        total += addon.price;
+    });
+
+    document.getElementById('modal-item-total').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+}
+
+function confirmCustomizedItem() {
+    if (!currentCustomizeItem) return;
+
+    let finalName = currentCustomizeItem.name;
+    let finalPrice = currentCustomizeItem.basePrice;
+    let selectedAddons = [];
+
+    const checkboxes = document.querySelectorAll('#modal-addons-list input[type="checkbox"]:checked');
+    checkboxes.forEach(cb => {
+        const addon = availableAddons[cb.value];
+        selectedAddons.push(addon.name);
+        finalPrice += addon.price;
+    });
+
+    if (selectedAddons.length > 0) {
+        finalName += ` (Adicionais: ${selectedAddons.join(', ')})`;
+    }
+
+    addToCartDirect(finalName, finalPrice);
+    closeCustomizeModal();
 }
 
 function changeQuantity(index, delta) {
@@ -72,7 +157,7 @@ function updateCartUI() {
                 <button onclick="changeQuantity(${index}, -1)" class="qty-btn">-</button>
                 <span style="font-weight: bold; width: 16px; text-align: center;">${item.quantity}</span>
                 <button onclick="changeQuantity(${index}, 1)" class="qty-btn">+</button>
-                <button onclick="removeItem(${index})" class="trash-btn"><i class="fas fa-trash"></i></button>
+                <button onclick="removeItem(${index})" class="trash-btn">🗑️</button>
             </div>
         `;
         itemsContainer.appendChild(row);
@@ -116,7 +201,7 @@ function checkoutWhatsApp() {
     message += `👤 *Cliente:* ${clientName}\n`;
     message += `📍 *Endereço/Entrega:* ${clientAddress}\n`;
     if (clientObs) {
-        message += `📝 *Observações:* ${clientObs}\n`;
+        message += `📝 *Observações gerais:* ${clientObs}\n`;
     }
     message += `\n----------------------------------\n`;
     message += `*ITENS DO PEDIDO:*\n`;

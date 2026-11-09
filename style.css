@@ -168,11 +168,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.2s;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.1s;
 }
 
 .menu-card:hover {
-    border-color: rgba(245, 158, 11, 0.4);
+    border-color: rgba(245, 158, 11, 0.6);
+    transform: translateY(-2px);
 }
 
 .menu-card img {
@@ -253,6 +255,11 @@ body {
     border-radius: 6px;
     border: 1px solid var(--border-color);
     font-size: 0.78rem;
+    transition: background 0.2s;
+}
+
+.option-row:hover {
+    background-color: rgba(245, 158, 11, 0.1);
 }
 
 /* Botão Flutuante do Carrinho */
@@ -291,7 +298,7 @@ body {
     border-radius: 9999px;
 }
 
-/* Modal Carrinho */
+/* Modais */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -299,6 +306,11 @@ body {
     z-index: 50;
     display: flex;
     justify-content: flex-end;
+}
+
+#customize-modal {
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -312,6 +324,13 @@ body {
     padding: 20px;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
+}
+
+#customize-modal .modal-content {
+    height: auto;
+    max-height: 85vh;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
 }
 
 .modal-header {
@@ -431,6 +450,22 @@ body {
 
 .checkout-btn:hover {
     background-color: #15803d;
+}
+
+.addon-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.addon-label input {
+    accent-color: var(--gold);
 }
 
 .hidden {

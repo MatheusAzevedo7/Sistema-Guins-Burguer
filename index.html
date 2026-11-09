@@ -13,7 +13,7 @@
     <header class="header">
         <div class="header-container">
             <div class="header-brand">
-                <img src="assets/img/logo.jpg" alt="Guin's Burger Logo" class="logo-img" onerror="this.style.display='none'">
+                <img src="logo.jpg" alt="Guin's Burger Logo" class="logo-img" onerror="this.style.display='none'">
                 <div class="header-info">
                     <h1>Guin's Burger</h1>
                     <p>
@@ -52,90 +52,39 @@
         <section class="category-section" data-category="entradas">
             <h3 class="category-title">🍟 ENTRADAS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">para compartilhar</span></h3>
             <div class="menu-grid">
-                <div class="menu-card">
-                    <img src="assets/img/batata-classica.jpg" alt="Batata Clássica" onerror="this.style.display='none'">
-                    <div class="menu-content">
-                        <div>
-                            <h4>Batata Clássica</h4>
-                            <p>Batata frita crocante 100g.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">R$ 10,00</span>
-                            <button onclick="addToCart('Batata Clássica', 10.00)" class="add-btn">+ Adicionar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-card">
-                    <img src="assets/img/batata-supreme.jpg" alt="Batata Supreme Bacon" onerror="this.style.display='none'">
-                    <div class="menu-content">
-                        <div>
-                            <h4>Batata Supreme Bacon</h4>
-                            <p>Batata frita 250g acompanha cheddar e bacon.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">R$ 29,00</span>
-                            <button onclick="addToCart('Batata Supreme Bacon', 29.00)" class="add-btn">+ Adicionar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-card">
-                    <img src="assets/img/frango-empanado.jpg" alt="Frango Empanado" onerror="this.style.display='none'">
-                    <div class="menu-content">
-                        <div>
-                            <h4>Frango Empanado</h4>
-                            <p>250g de frango empanado na farinha panko.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">R$ 28,00</span>
-                            <button onclick="addToCart('Frango Empanado', 28.00)" class="add-btn">+ Adicionar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-card">
-                    <img src="assets/img/mini-churros.jpg" alt="Mini Churros" onerror="this.style.display='none'">
-                    <div class="menu-content">
-                        <div>
-                            <h4>Mini Churros</h4>
-                            <p>10 unidades de mini churros com doce de leite.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">R$ 17,00</span>
-                            <button onclick="addToCart('Mini Churros', 17.00)" class="add-btn">+ Adicionar</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="menu-card"><img src="assets/img/batata-classica.jpg" alt="Batata Clássica" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Batata Clássica</h4><p>Batata frita crocante 100g.</p></div><div class="card-footer"><span class="price">R$ 10,00</span><button onclick="addToCartDirect('Batata Clássica', 10.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/batata-supreme.jpg" alt="Batata Supreme Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Batata Supreme Bacon</h4><p>Batata frita 250g acompanha cheddar e bacon.</p></div><div class="card-footer"><span class="price">R$ 29,00</span><button onclick="addToCartDirect('Batata Supreme Bacon', 29.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/frango-empanado.jpg" alt="Frango Empanado" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Frango Empanado</h4><p>250g de frango empanado na farinha panko.</p></div><div class="card-footer"><span class="price">R$ 28,00</span><button onclick="addToCartDirect('Frango Empanado', 28.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/mini-churros.jpg" alt="Mini Churros" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Mini Churros</h4><p>10 unidades de mini churros com doce de leite.</p></div><div class="card-footer"><span class="price">R$ 17,00</span><button onclick="addToCartDirect('Mini Churros', 17.00)" class="add-btn">+ Adicionar</button></div></div></div>
             </div>
         </section>
 
-        <!-- MAIS PEDIDOS -->
+        <!-- MAIS PEDIDOS (Com personalização de acréscimos ao clicar) -->
         <section class="category-section" data-category="mais_pedidos">
-            <h3 class="category-title">🍔 BURGERS MAIS PEDIDOS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">explosão de sabor</span></h3>
+            <h3 class="category-title">🍔 BURGERS MAIS PEDIDOS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">clique para adicionar acréscimos</span></h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/misto-egg.jpg" alt="Misto Egg" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Misto Egg</h4><p>Pão de forma, ovo, 2 presuntos e mussarela.</p></div><div class="card-footer"><span class="price">R$ 22,00</span><button onclick="addToCart('Misto Egg', 22.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-egg.jpg" alt="X Egg" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg</h4><p>Pão, bife, 2 ovos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><button onclick="addToCart('X Egg', 24.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-presunto.jpg" alt="X Presunto" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Presunto</h4><p>Pão, bife, 2 presuntos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><button onclick="addToCart('X Presunto', 24.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-bacon.jpg" alt="X Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Bacon</h4><p>Pão, bife, bacon, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 25,00</span><button onclick="addToCart('X Bacon', 25.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/gallis.jpg" alt="Gallis" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Gallis</h4><p>Pão, frango, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 27,00</span><button onclick="addToCart('Gallis', 27.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-tudo.jpg" alt="X Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo</h4><p>Pão, bife, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 27,00</span><button onclick="addToCart('X Tudo', 27.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/guins-tudo.jpg" alt="Guin's Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Guin's Tudo</h4><p>Pão, bife picanha, frango, calabresa, banana, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 43,00</span><button onclick="addToCart('Guin\'s Tudo', 43.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('Misto Egg', 22.00)"><img src="assets/img/misto-egg.jpg" alt="Misto Egg" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Misto Egg</h4><p>Pão de forma, ovo, 2 presuntos e mussarela.</p></div><div class="card-footer"><span class="price">R$ 22,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Egg', 24.00)"><img src="assets/img/x-egg.jpg" alt="X Egg" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg</h4><p>Pão, bife, 2 ovos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Presunto', 24.00)"><img src="assets/img/x-presunto.jpg" alt="X Presunto" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Presunto</h4><p>Pão, bife, 2 presuntos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Bacon', 25.00)"><img src="assets/img/x-bacon.jpg" alt="X Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Bacon</h4><p>Pão, bife, bacon, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 25,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('Gallis', 27.00)"><img src="assets/img/gallis.jpg" alt="Gallis" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Gallis</h4><p>Pão, frango, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 27,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Tudo', 27.00)"><img src="assets/img/x-tudo.jpg" alt="X Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo</h4><p>Pão, bife, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 27,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('Guin\'s Tudo', 43.00)"><img src="assets/img/guins-tudo.jpg" alt="Guin's Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Guin's Tudo</h4><p>Pão, bife picanha, frango, calabresa, banana, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 43,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
             </div>
         </section>
 
         <!-- TRADICIONAIS -->
         <section class="category-section" data-category="tradicionais">
-            <h3 class="category-title">🍔 TRADICIONAIS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">sabores clássicos</span></h3>
+            <h3 class="category-title">🍔 TRADICIONAIS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">clique para personalizar</span></h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/burger.jpg" alt="Burger" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Burger</h4><p>Pão, bife, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 22,00</span><button onclick="addToCart('Burger (Tradicional)', 22.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-egg-salada.jpg" alt="X Egg Salada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Salada</h4><p>Pão, bife, ovo, 2 queijos, salada e cebola roxa.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><button onclick="addToCart('X Egg Salada', 24.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-egg-presunto.jpg" alt="X Egg Presunto" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Presunto</h4><p>Pão, bife, ovo, 2 presuntos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 25,00</span><button onclick="addToCart('X Egg Presunto', 25.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-egg-bacon.jpg" alt="X Egg Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Bacon</h4><p>Pão, bife, ovo, bacon, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 26,00</span><button onclick="addToCart('X Egg Bacon', 26.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-tudo-picanha.jpg" alt="X Tudo Picanha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo Picanha</h4><p>Pão, bife picanha, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 29,00</span><button onclick="addToCart('X Tudo Picanha', 29.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-tudo-duplo.jpg" alt="X Tudo Duplo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo Duplo</h4><p>Pão, 2 bifes, 2 ovos, bacon, queijo, 2 presuntos, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 34,00</span><button onclick="addToCart('X Tudo Duplo', 34.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/gallis-tudo.jpg" alt="Gallis Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Gallis Tudo</h4><p>Pão, frango, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 34,00</span><button onclick="addToCart('Gallis Tudo', 34.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/x-duplo-picanha.jpg" alt="X Duplo Picanha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Duplo Picanha</h4><p>Pão, 2 bifes picanha, 2 ovos, bacon, queijo, 2 presuntos, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 40,00</span><button onclick="addToCart('X Duplo Picanha', 40.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('Burger (Tradicional)', 22.00)"><img src="assets/img/burger.jpg" alt="Burger" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Burger</h4><p>Pão, bife, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 22,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Egg Salada', 24.00)"><img src="assets/img/x-egg-salada.jpg" alt="X Egg Salada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Salada</h4><p>Pão, bife, ovo, 2 queijos, salada e cebola roxa.</p></div><div class="card-footer"><span class="price">R$ 24,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Egg Presunto', 25.00)"><img src="assets/img/x-egg-presunto.jpg" alt="X Egg Presunto" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Presunto</h4><p>Pão, bife, ovo, 2 presuntos, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 25,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Egg Bacon', 26.00)"><img src="assets/img/x-egg-bacon.jpg" alt="X Egg Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Egg Bacon</h4><p>Pão, bife, ovo, bacon, queijo, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 26,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Tudo Picanha', 29.00)"><img src="assets/img/x-tudo-picanha.jpg" alt="X Tudo Picanha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo Picanha</h4><p>Pão, bife picanha, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 29,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Tudo Duplo', 34.00)"><img src="assets/img/x-tudo-duplo.jpg" alt="X Tudo Duplo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Tudo Duplo</h4><p>Pão, 2 bifes, 2 ovos, bacon, queijo, 2 presuntos, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 34,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('Gallis Tudo', 34.00)"><img src="assets/img/gallis-tudo.jpg" alt="Gallis Tudo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Gallis Tudo</h4><p>Pão, frango, ovo, bacon, queijo, presunto, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 34,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
+                <div class="menu-card" onclick="openCustomizeModal('X Duplo Picanha', 40.00)"><img src="assets/img/x-duplo-picanha.jpg" alt="X Duplo Picanha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>X Duplo Picanha</h4><p>Pão, 2 bifes picanha, 2 ovos, bacon, queijo, 2 presuntos, salada, milho e batata palha.</p></div><div class="card-footer"><span class="price">R$ 40,00</span><span class="add-btn">+ Adicionar</span></div></div></div>
             </div>
         </section>
 
@@ -148,8 +97,8 @@
                     <div class="menu-content">
                         <div><h4>Chicken Clássico</h4><p>Pão brioche, frango empanado, molho barbecue e molho verde.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 30,00</span><button onclick="addToCart('Chicken Clássico (Burger)', 30.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 44,00</span><button onclick="addToCart('Chicken Clássico (Combo)', 44.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Chicken Clássico (Burger)', 30.00)"><span>Burger: R$ 30,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Chicken Clássico (Combo)', 44.00)"><span>Combo: R$ 44,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -158,8 +107,8 @@
                     <div class="menu-content">
                         <div><h4>Especial</h4><p>Pão, bife, bacon fatias, banana, cheddar e maionese.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 32,00</span><button onclick="addToCart('Especial (Burger)', 32.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 45,00</span><button onclick="addToCart('Especial (Combo)', 45.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Especial (Burger)', 32.00)"><span>Burger: R$ 32,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Especial (Combo)', 45.00)"><span>Combo: R$ 45,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -168,8 +117,8 @@
                     <div class="menu-content">
                         <div><h4>Mozarella</h4><p>Pão, bife, bacon cubo, mussarela, salada e molho verde.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 33,00</span><button onclick="addToCart('Mozarella (Burger)', 33.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 47,00</span><button onclick="addToCart('Mozarella (Combo)', 47.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Mozarella (Burger)', 33.00)"><span>Burger: R$ 33,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Mozarella (Combo)', 47.00)"><span>Combo: R$ 47,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -178,8 +127,8 @@
                     <div class="menu-content">
                         <div><h4>Chicken Bacon</h4><p>Pão, frango empanado, bacon fatias, cheddar e barbecue.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 33,00</span><button onclick="addToCart('Chicken Bacon (Burger)', 33.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 48,00</span><button onclick="addToCart('Chicken Bacon (Combo)', 48.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Chicken Bacon (Burger)', 33.00)"><span>Burger: R$ 33,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Chicken Bacon (Combo)', 48.00)"><span>Combo: R$ 48,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -188,8 +137,8 @@
                     <div class="menu-content">
                         <div><h4>Double Meat</h4><p>Pão, 2 bifes, bacon cubo, cheddar, maionese e barbecue.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 34,00</span><button onclick="addToCart('Double Meat (Burger)', 34.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 48,00</span><button onclick="addToCart('Double Meat (Combo)', 48.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Double Meat (Burger)', 34.00)"><span>Burger: R$ 34,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Double Meat (Combo)', 48.00)"><span>Combo: R$ 48,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -198,8 +147,8 @@
                     <div class="menu-content">
                         <div><h4>Estilo Guin's</h4><p>Pão, 2 bifes, bacon fatias, cheddar, salada, cebola roxa, maionese e barbecue.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 35,00</span><button onclick="addToCart('Estilo Guin\'s (Burger)', 35.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 49,00</span><button onclick="addToCart('Estilo Guin\'s (Combo)', 49.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Estilo Guin\'s (Burger)', 35.00)"><span>Burger: R$ 35,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Estilo Guin\'s (Combo)', 49.00)"><span>Combo: R$ 49,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
@@ -208,34 +157,22 @@
                     <div class="menu-content">
                         <div><h4>Triplo</h4><p>Pão, 3 bifes, bacon fatias, cheddar, molho verde e barbecue.</p></div>
                         <div class="gourmet-options">
-                            <div class="option-row"><span>Burger: R$ 40,00</span><button onclick="addToCart('Triplo (Burger)', 40.00)" class="add-btn">+ Adicionar</button></div>
-                            <div class="option-row"><span>Combo: R$ 55,00</span><button onclick="addToCart('Triplo (Combo)', 55.00)" class="add-btn">+ Adicionar</button></div>
+                            <div class="option-row" onclick="openCustomizeModal('Triplo (Burger)', 40.00)"><span>Burger: R$ 40,00</span><span class="add-btn">+ Adicionar</span></div>
+                            <div class="option-row" onclick="openCustomizeModal('Triplo (Combo)', 55.00)"><span>Combo: R$ 55,00</span><span class="add-btn">+ Adicionar</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ACRÉSCIMOS -->
+        <!-- ACRÉSCIMOS (Acréscimos avulsos gerais) -->
         <section class="category-section" data-category="acrescimos">
-            <h3 class="category-title">➕ ACRÉSCIMOS</h3>
+            <h3 class="category-title">➕ ACRÉSCIMOS AVULSOS</h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/salada.jpg" alt="Salada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Salada</h4><p>Adicional de salada</p></div><div class="card-footer"><span class="price">R$ 2,50</span><button onclick="addToCart('Salada (Acréscimo)', 2.50)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/mussarela.jpg" alt="Mussarela" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Mussarela</h4><p>Adicional de mussarela</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCart('Mussarela (Acréscimo)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/presunto.jpg" alt="Presunto" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Presunto</h4><p>Adicional de presunto</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCart('Presunto (Acréscimo)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/ovo.jpg" alt="Ovo" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Ovo</h4><p>Adicional de ovo</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCart('Ovo (Acréscimo)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/milho.jpg" alt="Milho" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Milho</h4><p>Adicional de milho</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCart('Milho (Acréscimo)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/batata-palha.jpg" alt="Batata Palha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Batata Palha</h4><p>Adicional de batata palha</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCart('Batata Palha (Acréscimo)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/banana.jpg" alt="Banana" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Banana</h4><p>Adicional de banana</p></div><div class="card-footer"><span class="price">R$ 3,50</span><button onclick="addToCart('Banana (Acréscimo)', 3.50)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/cheddar.jpg" alt="Cheddar" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Cheddar</h4><p>Adicional de cheddar</p></div><div class="card-footer"><span class="price">R$ 4,00</span><button onclick="addToCart('Cheddar (Acréscimo)', 4.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/bife.jpg" alt="Bife" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Bife</h4><p>Adicional de bife</p></div><div class="card-footer"><span class="price">R$ 4,00</span><button onclick="addToCart('Bife (Acréscimo)', 4.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/bacon-acrescimo.jpg" alt="Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Bacon</h4><p>Adicional de bacon</p></div><div class="card-footer"><span class="price">R$ 5,00</span><button onclick="addToCart('Bacon (Acréscimo)', 5.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/bife-picanha.jpg" alt="Bife Picanha" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Bife Picanha</h4><p>Adicional de bife picanha</p></div><div class="card-footer"><span class="price">R$ 5,00</span><button onclick="addToCart('Bife Picanha (Acréscimo)', 5.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/frango-acrescimo.jpg" alt="Frango" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Frango</h4><p>Adicional de frango</p></div><div class="card-footer"><span class="price">R$ 6,00</span><button onclick="addToCart('Frango (Acréscimo)', 6.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/bife-gourmet.jpg" alt="Bife Gourmet" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Bife Gourmet</h4><p>Adicional de bife gourmet</p></div><div class="card-footer"><span class="price">R$ 7,00</span><button onclick="addToCart('Bife Gourmet (Acréscimo)', 7.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/maionese.jpg" alt="Maionese" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Maionese</h4><p>Adicional de maionese</p></div><div class="card-footer"><span class="price">R$ 2,50</span><button onclick="addToCart('Maionese (Acréscimo)', 2.50)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/mostarda.jpg" alt="Mostarda" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Mostarda</h4><p>Adicional de mostarda</p></div><div class="card-footer"><span class="price">R$ 2,50</span><button onclick="addToCart('Mostarda (Acréscimo)', 2.50)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/ao-meio.jpg" alt="Ao Meio" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Ao Meio</h4><p>Cortado ao meio</p></div><div class="card-footer"><span class="price">R$ 2,00</span><button onclick="addToCart('Cortado Ao Meio', 2.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/salada.jpg" alt="Salada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Salada</h4><p>Adicional avulso</p></div><div class="card-footer"><span class="price">R$ 2,50</span><button onclick="addToCartDirect('Salada (Avulsa)', 2.50)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/mussarela.jpg" alt="Mussarela" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Mussarela</h4><p>Adicional avulso</p></div><div class="card-footer"><span class="price">R$ 3,00</span><button onclick="addToCartDirect('Mussarela (Avulsa)', 3.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/bacon-acrescimo.jpg" alt="Bacon" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Bacon</h4><p>Adicional avulso</p></div><div class="card-footer"><span class="price">R$ 5,00</span><button onclick="addToCartDirect('Bacon (Avulso)', 5.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/cheddar.jpg" alt="Cheddar" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Cheddar</h4><p>Adicional avulso</p></div><div class="card-footer"><span class="price">R$ 4,00</span><button onclick="addToCartDirect('Cheddar (Avulso)', 4.00)" class="add-btn">+ Adicionar</button></div></div></div>
             </div>
         </section>
 
@@ -243,14 +180,14 @@
         <section class="category-section" data-category="bebidas">
             <h3 class="category-title">🥤 BEBIDAS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">variadas</span></h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/agua-mineral.jpg" alt="Água Mineral" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Água Mineral</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 4,00</span><button onclick="addToCart('Água Mineral', 4.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/agua-com-gas.jpg" alt="Água com Gás" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Água com Gás</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 5,00</span><button onclick="addToCart('Água com Gás', 5.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/h2o.jpg" alt="H2O" onerror="this.style.display='none'"><div class="menu-content"><div><h4>H2O</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('H2O', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/coca-ks-290.jpg" alt="Coca Cola KS 290ml" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Coca Cola KS 290ml</h4><p>Garrafa vidro</p></div><div class="card-footer"><span class="price">R$ 7,00</span><button onclick="addToCart('Coca Cola KS 290ml', 7.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/refrigerante-lata.jpg" alt="Refrigerante Lata" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Refrigerante Lata</h4><p>Lata 350ml</p></div><div class="card-footer"><span class="price">R$ 8,00</span><button onclick="addToCart('Refrigerante Lata', 8.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/coca-ks-1l.jpg" alt="Coca Cola KS 1L" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Coca Cola KS 1L</h4><p>Garrafa 1 Litro</p></div><div class="card-footer"><span class="price">R$ 12,00</span><button onclick="addToCart('Coca Cola KS 1L', 12.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/refrigerante-1-5l.jpg" alt="Refrigerante 1,5L" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Refrigerante 1,5L</h4><p>Garrafa Pet 1,5 Litros</p></div><div class="card-footer"><span class="price">R$ 15,00</span><button onclick="addToCart('Refrigerante 1,5L', 15.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/cerveja-heineken.jpg" alt="Cerveja Heineken" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Cerveja Heineken</h4><p>Long Neck</p></div><div class="card-footer"><span class="price">R$ 12,00</span><button onclick="addToCart('Cerveja Heineken', 12.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/agua-mineral.jpg" alt="Água Mineral" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Água Mineral</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 4,00</span><button onclick="addToCartDirect('Água Mineral', 4.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/agua-com-gas.jpg" alt="Água com Gás" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Água com Gás</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 5,00</span><button onclick="addToCartDirect('Água com Gás', 5.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/h2o.jpg" alt="H2O" onerror="this.style.display='none'"><div class="menu-content"><div><h4>H2O</h4><p>Garrafa 500ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('H2O', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/coca-ks-290.jpg" alt="Coca Cola KS 290ml" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Coca Cola KS 290ml</h4><p>Garrafa vidro</p></div><div class="card-footer"><span class="price">R$ 7,00</span><button onclick="addToCartDirect('Coca Cola KS 290ml', 7.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/refrigerante-lata.jpg" alt="Refrigerante Lata" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Refrigerante Lata</h4><p>Lata 350ml</p></div><div class="card-footer"><span class="price">R$ 8,00</span><button onclick="addToCartDirect('Refrigerante Lata', 8.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/coca-ks-1l.jpg" alt="Coca Cola KS 1L" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Coca Cola KS 1L</h4><p>Garrafa 1 Litro</p></div><div class="card-footer"><span class="price">R$ 12,00</span><button onclick="addToCartDirect('Coca Cola KS 1L', 12.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/refrigerante-1-5l.jpg" alt="Refrigerante 1,5L" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Refrigerante 1,5L</h4><p>Garrafa Pet 1,5 Litros</p></div><div class="card-footer"><span class="price">R$ 15,00</span><button onclick="addToCartDirect('Refrigerante 1,5L', 15.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/cerveja-heineken.jpg" alt="Cerveja Heineken" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Cerveja Heineken</h4><p>Long Neck</p></div><div class="card-footer"><span class="price">R$ 12,00</span><button onclick="addToCartDirect('Cerveja Heineken', 12.00)" class="add-btn">+ Adicionar</button></div></div></div>
             </div>
         </section>
 
@@ -258,11 +195,11 @@
         <section class="category-section" data-category="sucos">
             <h3 class="category-title">🧃 SUCOS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">da fruta</span></h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/suco-acerola.jpg" alt="Suco Polpa Acerola" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Acerola)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('Suco Polpa Acerola', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/suco-maracuja.jpg" alt="Suco Polpa Maracujá" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Maracujá)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('Suco Polpa Maracujá', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/suco-graviola.jpg" alt="Suco Polpa Graviola" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Graviola)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('Suco Polpa Graviola', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/suco-abacaxi.jpg" alt="Suco Polpa Abacaxi" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Abacaxi)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('Suco Polpa Abacaxi', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/laranja-300ml.jpg" alt="Laranja 300ml" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Laranja 300ml</h4><p>Suco natural da fruta</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCart('Suco de Laranja 300ml', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/suco-acerola.jpg" alt="Suco Acerola" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Acerola)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('Suco Polpa Acerola', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/suco-maracuja.jpg" alt="Suco Maracujá" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Maracujá)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('Suco Polpa Maracujá', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/suco-graviola.jpg" alt="Suco Graviola" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Graviola)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('Suco Polpa Graviola', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/suco-abacaxi.jpg" alt="Suco Abacaxi" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Suco Polpa (Abacaxi)</h4><p>Feito na polpa 400ml</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('Suco Polpa Abacaxi', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/laranja-300ml.jpg" alt="Laranja" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Laranja 300ml</h4><p>Suco natural da fruta</p></div><div class="card-footer"><span class="price">R$ 9,00</span><button onclick="addToCartDirect('Suco de Laranja 300ml', 9.00)" class="add-btn">+ Adicionar</button></div></div></div>
             </div>
         </section>
 
@@ -270,14 +207,39 @@
         <section class="category-section" data-category="sodas">
             <h3 class="category-title">🍹 SODAS ITALIANAS <span style="font-size:0.8rem; font-weight:normal; color:#9ca3af;">refrescantes</span></h3>
             <div class="menu-grid">
-                <div class="menu-card"><img src="assets/img/soda-framboesa.jpg" alt="Soda Framboesa" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Framboesa</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCart('Soda Italiana Framboesa', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/soda-maca-verde.jpg" alt="Soda Maçã Verde" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Maçã Verde</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCart('Soda Italiana Maçã Verde', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/soda-laranja.jpg" alt="Soda Laranja" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Laranja</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCart('Soda Italiana Laranja', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
-                <div class="menu-card"><img src="assets/img/soda-personalizada.jpg" alt="Soda Personalizada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Personalizada</h4><p>Sabor à escolha</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCart('Soda Italiana Personalizada', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/soda-framboesa.jpg" alt="Soda Framboesa" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Framboesa</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCartDirect('Soda Italiana Framboesa', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/soda-maca-verde.jpg" alt="Soda Maçã Verde" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Maçã Verde</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCartDirect('Soda Italiana Maçã Verde', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/soda-laranja.jpg" alt="Soda Laranja" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Laranja</h4><p>Com lemon fresh e gelo</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCartDirect('Soda Italiana Laranja', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
+                <div class="menu-card"><img src="assets/img/soda-personalizada.jpg" alt="Soda Personalizada" onerror="this.style.display='none'"><div class="menu-content"><div><h4>Soda Italiana Personalizada</h4><p>Sabor à escolha</p></div><div class="card-footer"><span class="price">R$ 16,00</span><button onclick="addToCartDirect('Soda Italiana Personalizada', 16.00)" class="add-btn">+ Adicionar</button></div></div></div>
             </div>
         </section>
 
     </main>
+
+    <!-- Modal de Personalização de Acréscimos -->
+    <div id="customize-modal" class="modal-overlay hidden">
+        <div class="modal-content" style="max-width: 400px;">
+            <div class="modal-header">
+                <h2 id="modal-item-title">Personalizar Lanche</h2>
+                <button onclick="closeCustomizeModal()" class="close-btn">✕</button>
+            </div>
+            <div style="margin: 15px 0; max-height: 40vh; overflow-y: auto;">
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Escolha os acréscimos para este lanche:</p>
+                <div id="modal-addons-list" style="display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Checkboxes injetados via JS -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="total-row">
+                    <span>Preço Final:</span>
+                    <span id="modal-item-total">R$ 0,00</span>
+                </div>
+                <button onclick="confirmCustomizedItem()" class="checkout-btn">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Botão Flutuante do Carrinho -->
     <div id="cart-button-container" class="floating-cart-container hidden">
@@ -314,7 +276,7 @@
 
                 <div class="form-group">
                     <label>Observações do Pedido:</label>
-                    <textarea id="client-obs" placeholder="Ex: Sem cebola, ponto da carne, maionese à parte..."></textarea>
+                    <textarea id="client-obs" placeholder="Ex: Pão bem selado, maionese à parte..."></textarea>
                 </div>
 
                 <div class="total-row">
