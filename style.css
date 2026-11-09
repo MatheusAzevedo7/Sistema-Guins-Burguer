@@ -1,0 +1,438 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1a1a1a;
+    --gold: #f59e0b;
+    --gold-hover: #d97706;
+    --text-color: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #27272a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    padding-bottom: 90px;
+}
+
+/* Header & Logo */
+.header {
+    background-color: #000;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+}
+
+.header-info h1 {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.header-info p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.location-link {
+    color: var(--gold);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.location-link:hover {
+    color: #fff;
+}
+
+.whatsapp-btn {
+    background-color: #16a34a;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #15803d;
+}
+
+/* Navegação por Categorias */
+.category-nav {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 75px;
+    z-index: 30;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    padding: 12px 16px;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.cat-btn {
+    background-color: #27272a;
+    color: var(--text-muted);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background-color: var(--gold);
+    color: #000;
+    font-weight: bold;
+}
+
+/* Container do Cardápio */
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.category-section {
+    margin-bottom: 32px;
+}
+
+.category-title {
+    font-size: 1.25rem;
+    color: var(--gold);
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.menu-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s;
+}
+
+.menu-card:hover {
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-content {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-card h4 {
+    font-size: 1.05rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.menu-card p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.add-btn {
+    background-color: var(--gold);
+    color: #000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.78rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.2s;
+}
+
+.add-btn:hover {
+    background-color: var(--gold-hover);
+}
+
+.gourmet-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.option-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 0.78rem;
+}
+
+/* Botão Flutuante do Carrinho */
+.floating-cart-container {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 40;
+}
+
+.floating-cart-btn {
+    background-color: var(--gold);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s;
+}
+
+.floating-cart-btn:hover {
+    transform: scale(1.05);
+}
+
+.cart-badge {
+    background-color: #000;
+    color: var(--gold);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 9999px;
+}
+
+/* Modal Carrinho */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.cart-items-list {
+    margin: 10px 0;
+    max-height: 35vh;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+.qty-btn {
+    background-color: #27272a;
+    color: #fff;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.trash-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    background-color: #000;
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px;
+    font-size: 0.85rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-group textarea {
+    height: 45px;
+    resize: none;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #15803d;
+}
+
+.hidden {
+    display: none !important;
+}
